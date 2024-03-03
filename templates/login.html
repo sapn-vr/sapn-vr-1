@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Foro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Iniciar Sesión - Foro</h1>
+        <a href="{{ url_for('index') }}">Volver al foro</a>
+    </header>
+
+    <div class="container">
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Policía Nacional de San Andreas</p>
+    </footer>
+</body>
+</html>
