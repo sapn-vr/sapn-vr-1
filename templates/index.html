@@ -4,47 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foro - Policía Nacional de San Andreas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .container {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .post {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
         <h1>Foro - Policía Nacional de San Andreas</h1>
+        {% if 'usuario' in session %}
+        <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+        {% else %}
+        <a href="{{ url_for('login') }}">Iniciar sesión</a>
+        {% endif %}
     </header>
 
     <div class="container">
@@ -53,9 +22,6 @@
             <h2>{{ post['titulo'] }}</h2>
             <p class="font-italic">Autor: {{ post['autor'] }}</p>
             <p>{{ post['contenido'] }}</p>
-            {% if post['imagen'] %}
-            <img src="{{ url_for('static', filename='imagenes/' + post['imagen']) }}" class="img-fluid rounded" alt="Imagen del Post">
-            {% endif %}
         </div>
         {% endfor %}
     </div>
