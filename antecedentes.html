@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foro - Policía Nacional de San Andreas</title>
+    <title>Búsqueda y Captura - Policía Nacional de San Andreas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,10 +13,16 @@
         }
 
         header {
-            background-color: #00264d;
+            background-color: #343a40;
             color: white;
             text-align: center;
             padding: 20px 0;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
         .container {
@@ -32,6 +38,7 @@
             margin-bottom: 20px;
             border-bottom: 1px solid #ccc;
             padding-bottom: 20px;
+            overflow: hidden; /* Añadido para contener la imagen */
         }
 
         .post:last-child {
@@ -46,8 +53,14 @@
             margin: 10px 0;
         }
 
+        .post img {
+            float: left; /* Alinea la imagen a la izquierda */
+            margin-right: 20px; /* Espacio entre la imagen y el texto */
+            border-radius: 5px;
+        }
+
         footer {
-            background-color: #00264d;
+            background-color: #343a40;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -60,24 +73,31 @@
 <body>
     <header>
         <h1>Foro - Policía Nacional de San Andreas</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="#">Busqueda y Captura</a>
+        </nav>
     </header>
 
     <div class="container">
         <div class="post">
-            <h2>Sofia Martinez</h2>
-            <p>Autor: Juan Gutierres. Placa: </p>
+            <img src="ejemplo.jpg" alt="Ejemplo de Imagen" width="200">
+            <h2>Título del Post 1</h2>
+            <p>Autor: Usuario1</p>
             <p>Contenido del primer post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mauris vel odio dapibus, id pharetra risus dictum. Nullam sed nunc a sem fringilla ultricies eu ut purus. Morbi vestibulum convallis risus, eget mollis sapien finibus sit amet.</p>
-            
         </div>
 
         <!-- Puedes agregar más posts aquí manualmente -->
-        <!-- Ejemplo: -->
+        <!-- Ejemplo:
         <div class="post">
+            <img src="ejemplo.jpg" alt="Ejemplo de Imagen" width="200">
             <h2>Título del Post 2</h2>
             <p>Autor: Usuario2</p>
             <p>Contenido del segundo post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor mauris vel odio dapibus, id pharetra risus dictum. Nullam sed nunc a sem fringilla ultricies eu ut purus. Morbi vestibulum convallis risus, eget mollis sapien finibus sit amet.</p>
         </div>
-        
+        -->
     </div>
 
     <footer>
