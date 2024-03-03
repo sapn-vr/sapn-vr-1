@@ -15,4 +15,21 @@
     <div class="container">
         <form action="/nuevo_post" method="POST">
             <div class="form-group">
-               
+                <label for="titulo">Título:</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contenido">Contenido:</label>
+                <textarea class="form-control" id="contenido" name="contenido" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Publicar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Policía Nacional de San Andreas</p>
+    </footer>
+</body>
+</html>
