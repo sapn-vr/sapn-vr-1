@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Policía Nacional de San Andreas - Servicios</title>
+    <title>Policía Nacional de San Andreas - Posts</title>
     <link rel="icon" href="icono.ico" type="image/x-icon"> 
     <style>
         body {
@@ -15,16 +14,14 @@
         }
 
         header {
-            background-color: #002868;
-            /* Azul oscuro */
+            background-color: #002868; /* Azul oscuro */
             color: white;
             padding: 20px;
             text-align: center;
         }
 
         nav {
-            background-color: #ff0000;
-            /* Rojo */
+            background-color: #ff0000; /* Rojo */
             color: white;
             padding: 10px;
             text-align: center;
@@ -53,7 +50,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .service {
+        .post {
             margin-bottom: 20px;
             padding: 20px;
             border: 1px solid #ccc;
@@ -61,9 +58,24 @@
             background-color: #f9f9f9;
         }
 
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         footer {
-            background-color: #002868;
-            /* Azul oscuro */
+            background-color: #002868; /* Azul oscuro */
             color: white;
             text-align: center;
             padding: 10px;
@@ -73,10 +85,9 @@
         }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>¿Que ofrecemos?</h1>
+        <h1>Posts</h1>
     </header>
 
     <nav>
@@ -88,23 +99,21 @@
 
     <div class="container">
         <div class="content">
-            <h2>Servicios</h2>
-            <div class="service">
-                <h3>Patrullaje</h3>
-                <p>Nuestros agentes patrullan las calles de San Andreas las 24 horas del día, los 7 días de la semana,
-                    para garantizar la seguridad de todos los ciudadanos.</p>
+            <div class="post">
+                <h2>Título del Primer Post</h2>
+                <p>Descripción del Primer Post</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jKN7s-HVyIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="service">
-                <h3>Respuesta a Emergencias</h3>
-                <p>Estamos listos para responder rápidamente a cualquier emergencia que ocurra en la ciudad, ya sea un
-                    accidente de tráfico, un incendio o cualquier otra situación de peligro.</p>
+            <div class="post">
+                <h2>Título del Segundo Post</h2>
+                <p>Descripción del Segundo Post</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jKN7s-HVyIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="service">
-                <h3>Investigaciones Criminales</h3>
-                <p>Nuestros detectives altamente capacitados llevan a cabo investigaciones exhaustivas para resolver
-                    crímenes y llevar a los responsables ante la justicia.</p>
-            </div>
-            <!-- Puedes agregar más servicios según sea necesario -->
+            <!-- Puedes agregar más posts según sea necesario -->
         </div>
     </div>
 
@@ -112,5 +121,4 @@
         <p>&copy; 2024 Policía Nacional de San Andreas</p>
     </footer>
 </body>
-
 </html>
