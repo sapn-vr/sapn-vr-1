@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postulación a la Policía en el Servidor RD Erol</title>
+    <title>Formulario de Examen de la Policía</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,34 +15,160 @@
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 50px auto;
             padding: 20px;
-            text-align: center;
+            background-color: #34495e; /* Azul un poco más claro */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         h1 {
             color: #c0392b; /* Rojo */
+            text-align: center;
         }
 
-        .formulario-google {
-            margin-top: 20px;
+        .form-group {
+            margin-bottom: 20px;
         }
 
-        /* Estilos para el formulario de Google (cambia según tus necesidades) */
-        .formulario-google iframe {
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"],
+        input[type="text"] {
             width: 100%;
-            max-width: 800px;
-            height: 800px;
+            padding: 10px;
             border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #c0392b; /* Rojo */
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e74c3c; /* Rojo más claro */
+        }
+
+        .ooc {
+            background-color: #2980b9; /* Azul */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Postulación a la Policía en el Servidor RD Erol</h1>
-        <div class="formulario-google">
-            <iframe src="https://docs.google.com/forms/d/e/1VpED1KLfaf2WD6Z4Kes8DLVD7nnwp1ZxbM3Pe_FEJuo/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-        </div>
+        <h1>Formulario de Examen de la Policía</h1>
+        <form action="https://formsubmit.co/tareasjuanbaron@gmail.com" method="POST" >
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="apodo">Apodo en Discord:</label>
+                <input type="text" id="apodo" name="apodo" required>
+            </div>
+            <div class="form-group">
+                <label for="ic">¿Qué significa IC?</label>
+                <input type="text" id="ic" name="ic" required>
+            </div>
+            <div class="form-group">
+                <label for="ooc">¿Qué significa OOC?</label>
+                <input type="text" id="ooc" name="ooc" required>
+            </div>
+            <div class="form-group">
+                <label for="pg">¿Qué significa PG en roleplay?</label>
+                <input type="text" id="pg" name="pg" required>
+            </div>
+            <div class="form-group">
+                <label for="mg">¿Qué significa MG en roleplay?</label>
+                <input type="text" id="mg" name="mg" required>
+            </div>
+            <div class="form-group">
+                <label for="pg2">¿Qué es un PG2?</label>
+                <input type="text" id="pg2" name="pg2" required>
+            </div>
+            <div class="form-group">
+                <label for="rk">¿Qué es el RK?</label>
+                <input type="text" id="rk" name="rk" required>
+            </div>
+            <div class="form-group">
+                <label for="fa_nip">¿Qué es el FA y el NIP?</label>
+                <input type="text" id="fa_nip" name="fa_nip" required>
+            </div>
+            <div class="form-group">
+                <label for="esposar">Un usuario al que vas a esposar se desconecta. ¿Qué harías?</label>
+                <input type="text" id="esposar" name="esposar" required>
+            </div>
+            <div class="form-group">
+                <label for="horas_servidor">¿Cuántas horas tienes en el servidor?</label>
+                <input type="number" id="horas_servidor" name="horas_servidor" required>
+            </div>
+            <div class="form-group">
+                <label for="microfono">Cuentas con micrófono?</label>
+                <select id="microfono" name="microfono" required>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="calidad_microfono">Si la respuesta es sí, define la calidad del mismo del 1 al 10:</label>
+                <input type="number" id="calidad_microfono" name="calidad_microfono" min="1" max="10">
+            </div>
+            <div class="form-group">
+                <label for="experiencia_policia">Tienes experiencia en el rol de policía? Si la respuesta es si cuéntanos un poco de la misma.</label>
+                <textarea id="experiencia_policia" name="experiencia_policia" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tiempo_semanal">¿Cuánto tiempo le puedes dedicar semanalmente al Rol de policía?</label>
+                <input type="text" id="tiempo_semanal" name="tiempo_semanal" required>
+            </div>
+            <div class="form-group">
+                <label for="nivel_rol">Califique su nivel de rol del 1 al 10:</label>
+                <input type="number" id="nivel_rol" name="nivel_rol" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="edad_ooc">Edad OOC:</label>
+                <input type="number" id="edad_ooc" name="edad_ooc" required>
+            </div>
+            <div class="form-group">
+                <label for="foto_stats">Foto de las Stats (Que se pueda subir imágenes y se envíen a la API de Forms Submit)</label>
+                <input type="file" id="foto_stats" name="foto_stats" accept="image/*" required>
+            </div>
+            <div class="ooc">
+                <p>Apartado OOC</p>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 </body>
 </html>
