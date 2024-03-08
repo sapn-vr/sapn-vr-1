@@ -1,305 +1,128 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Examen de la Policía</title>
+    <title>Policía Nacional de San Andreas</title>
     <link rel="icon" href="icono.ico" type="image/x-icon"> 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #2c3e50; /* Azul oscuro */
-            color: #fff;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #002868;
+            /* Azul oscuro */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ff0000;
+            /* Rojo */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .container {
             max-width: 800px;
-            margin: 50px auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #34495e; /* Azul un poco más claro */
+            background-color: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            color: #FF0000; /* Rojo */
+        footer {
+            background-color: #002868;
+            /* Azul oscuro */
+            color: white;
             text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h1, h2 {
+            color: #000000;
+        }
+
+        #title_arrow {
+            color: #FFFFFF;
         }
         
-        h2 {
-            color: #FF0000; /* Rojo */
-            text-align: center;
-        }
-
-        .form-group {
+        
+        p {
             margin-bottom: 20px;
         }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
+        .division {
+            margin-bottom: 40px;
         }
 
-        input[type="email"],
-        input[type="text"] {
+        iframe {
             width: 100%;
-            padding: 10px;
+            height: 500px;
             border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #333;
         }
 
-        input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #333;
-        }
+        #boton_postular {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #dc0404; /* color del fondo del botón */
+          color: white; /* color del texto del botón */
+          border: none;
+          border-radius: 5px; /* para bordes redondeados */
+          text-decoration: none; /* quitar subrayado */
+          cursor: pointer; /* cambiar el cursor al pasar sobre el botón */
+}
 
-        select {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #333;
-        }
+    #boton_postular:hover {
+          background-color: #df3535; /* color del fondo del botón al pasar el cursor */
+    }
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #FF0000; /* Rojo */
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #e74c3c; /* Rojo más claro */
-        }
-
-        .ooc {
-            background-color: #2980b9; /* Azul */
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+        
     </style>
 </head>
+
 <body>
+    <header>
+        <h1 id="title_arrow">Policía Nacional de San Andreas</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="penal.html">Artículo Penal</a>
+        <a href="antecedentes.html">Búsqueda y Captura</a>
+    </nav>
+
     <div class="container">
-        <h1>Formulario de Ingreso</h1>
-        <h2>Apartado OOC</h2>
-        <form action="https://formspree.io/f/xrgnkwar" method="POST" >
-            <div class="form-group">
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required>
-            </div>
-            <div class="form-group">
-                <label for="apodo">Apodo en Discord:</label>
-                <input type="text" id="apodo" name="apodo" required>
-            </div>
-            <div class="form-group">
-                <label for="ic">¿Qué significa IC?</label>
-                <input type="text" id="ic" name="ic" required>
-            </div>
-            <div class="form-group">
-                <label for="ooc">¿Qué significa OOC?</label>
-                <input type="text" id="ooc" name="ooc" required>
-            </div>
-            <div class="form-group">
-                <label for="pg">¿Qué significa PG en roleplay?</label>
-                <input type="text" id="pg" name="pg" required>
-            </div>
-            <div class="form-group">
-                <label for="mg">¿Qué significa MG en roleplay?</label>
-                <input type="text" id="mg" name="mg" required>
-            </div>
-            <div class="form-group">
-                <label for="pg2">¿Qué es un PG2?</label>
-                <input type="text" id="pg2" name="pg2" required>
-            </div>
-            <div class="form-group">
-                <label for="rk">¿Qué es el RK?</label>
-                <input type="text" id="rk" name="rk" required>
-            </div>
-            <div class="form-group">
-                <label for="fa_nip">¿Qué es el FA y el NIP?</label>
-                <input type="text" id="fa_nip" name="fa_nip" required>
-            </div>
-            <div class="form-group">
-                <label for="esposar">Un usuario al que vas a esposar se desconecta. ¿Qué harías?</label>
-                <input type="text" id="esposar" name="esposar" required>
-            </div>
-            <div class="form-group">
-                <label for="horas_servidor">¿Cuántas horas tienes en el servidor?</label>
-                <input type="number" id="horas_servidor" name="horas_servidor" required>
-            </div>
-            <div class="form-group">
-                <label for="microfono">Cuentas con micrófono?</label>
-                <select id="microfono" name="microfono" required>
-                    <option value="si">Sí</option>
-                    <option value="no">No</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="calidad_microfono">Si la respuesta es sí, define la calidad del mismo del 1 al 10:</label>
-                <input type="number" id="calidad_microfono" name="calidad_microfono" min="1" max="10">
-            </div>
-            <div class="form-group">
-                <label for="experiencia_policia">Tienes experiencia en el rol de policía? Si la respuesta es si cuéntanos un poco de la misma.</label>
-                <textarea id="experiencia_policia" name="experiencia_policia" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="tiempo_semanal">¿Cuánto tiempo le puedes dedicar semanalmente al Rol de policía?</label>
-                <input type="text" id="tiempo_semanal" name="tiempo_semanal" required>
-            </div>
-            <div class="form-group">
-                <label for="nivel_rol">Califique su nivel de rol del 1 al 10:</label>
-                <input type="number" id="nivel_rol" name="nivel_rol" min="1" max="10" required>
-            </div>
-            <div class="form-group">
-                <label for="edad_ooc">Edad OOC:</label>
-                <input type="number" id="edad_ooc" name="edad_ooc" required>
-            </div>
-            <div class="form-group">
-                <label for="foto_stats">Foto de las Stats un Enlace</label>
-                <input type="text" id="tiempo_semanal" name="stats_foto_link" required>
-            </div>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #2c3e50; /* Azul oscuro */
-            color: #fff;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #34495e; /* Azul un poco más claro */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        h1 {
-            color: #FF0000; /* Rojo */
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input[type="email"],
-        input[type="text"],
-        input[type="number"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #333;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #FF0000; /* Rojo */
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #e74c3c; /* Rojo más claro */
-        }
-
-        .ooc {
-            background-color: #2980b9; /* Azul */
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    
-        <h2>Apartado IC</h2>
-            <div class="form-group">
-                <label for="nombre_ic">Nombre IC:</label>
-                <input type="text" id="nombre_ic" name="nombre_ic" required>
-            </div>
-            <div class="form-group">
-                <label for="dni_ic">DNI IC:</label>
-                <input type="text" id="dni_ic" name="dni_ic" required>
-            </div>
-            <div class="form-group">
-                <label for="edad_ic">Edad IC:</label>
-                <input type="number" id="edad_ic" name="edad_ic" required>
-            </div>
-            <div class="form-group">
-                <label for="patrullaje_favelas">Siendo oficial en patrullaje ordinario, ¿subirías a favelas?</label>
-                <select id="patrullaje_favelas" name="patrullaje_favelas" required>
-                    <option value="si">Sí</option>
-                    <option value="no">No</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="patrullaje_aeropuerto">Siendo oficial en patrullaje ordinario, ¿entrarías a Aeropuerto Abandonado?</label>
-                <select id="patrullaje_aeropuerto" name="patrullaje_aeropuerto" required>
-                    <option value="si">Sí</option>
-                    <option value="no">No</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="accion_oxxo">Entran tres sujetos armados en un oxxo a robar pero tú los ves desde fuera con tu unidad. ¿Qué harías?</label>
-                <textarea id="accion_oxxo" name="accion_oxxo" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="habilidad_conduccion">Defina del 1 al 10 su habilidad de conducción:</label>
-                <input type="number" id="habilidad_conduccion" name="habilidad_conduccion" min="1" max="10" required>
-            </div>
-            <div class="form-group">
-                <label for="habilidad_armas">Defina del 1 al 10 su habilidad con las armas:</label>
-                <input type="number" id="habilidad_armas" name="habilidad_armas" min="1" max="10" required>
-            </div>
-            <div class="form-group">
-                <label for="motivo_ingreso">¿Por qué quiere ingresar al departamento de policía?</label>
-                <textarea id="motivo_ingreso" name="motivo_ingreso" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="obediencia_superiores">¿Está de acuerdo en seguir órdenes de superiores? ¿Por qué? Sea extenso con su respuesta.</label>
-                <textarea id="obediencia_superiores" name="obediencia_superiores" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="razon_aceptacion">¿Por qué usted cree que debería ser aceptado?</label>
-                <textarea id="razon_aceptacion" name="razon_aceptacion" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="divisiones_policia">¿Qué divisiones conoce del departamento de policía? Sea extenso con su respuesta.</label>
-                <textarea id="divisiones_policia" name="divisiones_policia" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="rol_policia">Realiza un rol relacionado con la policía de 20 líneas o más en los que emplees el /me y el /do.</label>
-                <textarea id="rol_policia" name="rol_policia" rows="10" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
+        <h1>Bienvenido a la Postulación a la Policía Nacional de San Andreas</h1>
+        <p>Estás a punto de dar el primer paso para unirte a la prestigiosa Policía Nacional de San Andreas (SAPN). Nuestra misión es proteger y servir a la comunidad de San Andreas, garantizando la seguridad de todos los ciudadanos.</p>
+        <p>Si estás interesado en formar parte de nuestra fuerza policial, completa el formulario de postulación a continuación. Nos pondremos en contacto contigo tan pronto como sea posible para continuar con el proceso de selección.</p>
+        <p>Por favor, completa el formulario con información precisa y verídica. ¡Esperamos contar con tu compromiso y dedicación para hacer de San Andreas un lugar más seguro para todos!</p>
+        <a id="btn_postular" href="https://docs.google.com/forms/d/1VpED1KLfaf2WD6Z4Kes8DLVD7nnwp1ZxbM3Pe_FEJuo/edit?hl=ES&pli=1">Postular.</a>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Policía Nacional de San Andreas</p>
+    </footer>
 </body>
+
 </html>
