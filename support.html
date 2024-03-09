@@ -95,19 +95,9 @@
         <h1 id="title_down" >San Andreas Policía Nacional (SAPN)</h1>
         
         <div class="division">
-            <h2 style="color: #001996" >División de Operaciones Especiales (GOES)</h2>
-        </div>
-        
-        <div class="division" >
-            <h2 style="color: #cc0000">División de Investigación (DDI)</h2>
-        </div>
-        
-        <div class="division" >
-            <h2 style="color: #12cf07">Formadores Profesionales de Oficiales (FPO)</h2>
-        </div>
-        
-        <div class="division" >
-            <h2 style="color: #ff9300">División de Tráfico (DDT)</h2>
+            <input type="text" id="embedTitle" placeholder="Título del Embed" style="width: 100%; margin-bottom: 10px;"><br>
+            <textarea id="embedDescription" placeholder="Descripción del Embed" rows="4" style="width: 100%; margin-bottom: 10px;"></textarea><br>
+            <button onclick="sendEmbed()">Enviar Embed</button>
         </div>
         
     </div>
@@ -117,7 +107,11 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        function sendEmbed() {
+            const title = document.getElementById('embedTitle').value;
+            const description = document.getElementById('embedDescription').value;
+            const color = '#ff0000'; // Puedes cambiar el color a tu gusto
+            
             const webhookURL = 'https://discord.com/api/webhooks/1215814980562190356/4AiDsEht7Gc8mX92FsHcQCqQ7u3eoly3wyW1aC34_HQ36JZaI-kU_NAY7tr3NZkpovMK'; // Reemplaza esto con la URL de tu webhook
 
             const sendEmbedToDiscord = async (title, description, color) => {
@@ -149,9 +143,8 @@
                 }
             };
 
-            // Ejemplo de uso:
-            sendEmbedToDiscord('Título del Embed', 'Descripción del Embed', '#ff0000'); // Puedes cambiar el color a tu gusto
-        });
+            sendEmbedToDiscord(title, description, color);
+        }
     </script>
 </body>
 
