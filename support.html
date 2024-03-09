@@ -145,11 +145,13 @@
                 return;
             }
 
+            const timestamp = new Date().toISOString();    
             const payload = {
                 embeds: [{
                     title: title,
                     description: description,
-                    color: parseInt(color.replace('#', ''), 16)
+                    color: parseInt(color.replace('#', ''), 16),
+                    timestamp: timestamp
                 }]
             };
 
