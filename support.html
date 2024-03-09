@@ -69,6 +69,42 @@
         .division {
             margin-bottom: 40px;
         }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="button"] {
+            width: calc(100% - 10px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        textarea {
+            width: calc(100% - 10px);
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #002868;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #001C52;
+        }
     </style>
 </head>
 <body>
@@ -85,15 +121,15 @@
     </nav>
 
     <div class="container">
-        <label for="title">Título del Embed:</label><br>
-        <input type="text" id="title" name="title" style="width: 100%; margin-bottom: 10px;"><br>
+        <label for="title">Título del Embed:</label>
+        <input type="text" id="title" name="title">
         
-        <label for="description">Descripción del Embed:</label><br>
-        <textarea id="description" name="description" rows="4" style="width: 100%; margin-bottom: 10px;"></textarea><br>
+        <label for="description">Descripción del Embed:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
         
         <button onclick="sendEmbed()">Enviar Embed</button>
     </div>
-
+    <footer>&copy; Polícia Nacional de San Andreas</footer>
     <script>
         const webhookUrl = 'https://discord.com/api/webhooks/1215814980562190356/4AiDsEht7Gc8mX92FsHcQCqQ7u3eoly3wyW1aC34_HQ36JZaI-kU_NAY7tr3NZkpovMK'; // Reemplaza 'URL_DEL_WEBHOOK' con la URL de tu webhook
         const color = '#ff0000'; // Color del embed
