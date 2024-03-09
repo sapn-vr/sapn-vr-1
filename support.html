@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Policía Nacional de San Andreas</title>
+    <link rel="icon" href="icono.ico" type="image/x-icon"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #002868;
+            /* Azul oscuro */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ff0000;
+            /* Rojo */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #002868;
+            /* Azul oscuro */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h1, h2 {
+            color: #000000;
+        }
+
+        #title_arrow {
+            color: #FFFFFF;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        .division {
+            margin-bottom: 40px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="title_arrow">Policía Nacional de San Andreas</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="penal.html">Artículo Penal</a>
+        <a href="antecedentes.html">Búsqueda y Captura</a>
+        <a href="postulacion.html">Postula</a>
+    </nav>
+
+    <div class="container">
+        
+        <h1 id="title_down" >San Andreas Policía Nacional (SAPN)</h1>
+        
+        <div class="division">
+            <h2 style="color: #001996" >División de Operaciones Especiales (GOES)</h2>
+        </div>
+        
+        <div class="division" >
+            <h2 style="color: #cc0000">División de Investigación (DDI)</h2>
+        </div>
+        
+        <div class="division" >
+            <h2 style="color: #12cf07">Formadores Profesionales de Oficiales (FPO)</h2>
+        </div>
+        
+        <div class="division" >
+            <h2 style="color: #ff9300">División de Tráfico (DDT)</h2>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Policía Nacional de San Andreas</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const webhookURL = 'https://discord.com/api/webhooks/1215814980562190356/4AiDsEht7Gc8mX92FsHcQCqQ7u3eoly3wyW1aC34_HQ36JZaI-kU_NAY7tr3NZkpovMK'; // Reemplaza esto con la URL de tu webhook
+
+            const sendEmbedToDiscord = async (title, description, color) => {
+                try {
+                    const response = await fetch(webhookURL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            embeds: [{
+                                title: title,
+                                description: description,
+                                color: color
+                            }]
+                        }),
+                    });
+
+                    if (response.ok) {
+                        console.log('Embed enviado a Discord correctamente.');
+                        alert('Embed enviado correctamente a Discord!');
+                    } else {
+                        console.error('Error al enviar el embed a Discord:', response.statusText);
+                        alert('Ocurrió un error al enviar el embed a Discord.');
+                    }
+                } catch (error) {
+                    console.error('Error al enviar el embed a Discord:', error);
+                    alert('Ocurrió un error al enviar el embed a Discord.');
+                }
+            };
+
+            // Ejemplo de uso:
+            sendEmbedToDiscord('Título del Embed', 'Descripción del Embed', '#ff0000'); // Puedes cambiar el color a tu gusto
+        });
+    </script>
+</body>
+
+</html>
