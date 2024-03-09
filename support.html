@@ -53,11 +53,38 @@
             bottom: 0;
             width: 100%;
         }
+
+        h1, h2 {
+            color: #000000;
+        }
+
+        #title_arrow {
+            color: #FFFFFF;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .division {
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
-    <h1>Enviar Embed a Discord</h1>
-    <div>
+    <header>
+        <h1 id="title_arrow">Policía Nacional de San Andreas</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="penal.html">Artículo Penal</a>
+        <a href="antecedentes.html">Búsqueda y Captura</a>
+        <a href="postulacion.html">Postula</a>
+    </nav>
+
+    <div class="container">
         <label for="title">Título del Embed:</label><br>
         <input type="text" id="title" name="title" style="width: 100%; margin-bottom: 10px;"><br>
         
@@ -69,7 +96,7 @@
 
     <script>
         const webhookUrl = 'https://discord.com/api/webhooks/1215814980562190356/4AiDsEht7Gc8mX92FsHcQCqQ7u3eoly3wyW1aC34_HQ36JZaI-kU_NAY7tr3NZkpovMK'; // Reemplaza 'URL_DEL_WEBHOOK' con la URL de tu webhook
-        const color = '#FF0000'; // Color del embed
+        const color = '#ff0000'; // Color del embed
 
         function sendEmbed() {
             const title = document.getElementById('title').value;
