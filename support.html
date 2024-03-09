@@ -162,6 +162,7 @@
             .then(response => {
                 if (response.ok) {
                     alert('Embed enviado correctamente a Discord.');
+                    location.reload();
                 } else {
                     alert('Error al enviar el embed a Discord.');
                 }
